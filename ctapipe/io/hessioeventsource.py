@@ -117,6 +117,7 @@ class HESSIOEventSource(EventSource):
                 data.mcheader.run_array_direction = Angle(
                     file.get_mc_run_array_direction() * u.rad
                 )
+                data.mcheader.obs_height = file.get_mc_obsheight() * u.m
 
                 # this should be done in a nicer way to not re-allocate the
                 # data each time (right now it's just deleted and garbage

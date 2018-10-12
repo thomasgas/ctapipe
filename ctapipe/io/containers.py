@@ -270,6 +270,7 @@ class MCHeaderContainer(Container):
         "OR "
         "[0]=R.A., [1]=Declination in mode 1."
     ))
+    obs_height = Field(0.0, "Site altitude above sea level", unit=u.m)
 
 
 class CentralTriggerContainer(Container):
