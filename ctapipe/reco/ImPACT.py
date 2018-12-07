@@ -386,7 +386,8 @@ class ImPACTReconstructor(Reconstructor):
         x_max_exp = guess_shower_depth(energy)  # / np.cos(20*u.deg)
 
         # Convert to binning of Xmax
-        x_max_bin = x_max - x_max_exp
+        # x_max_bin = x_max - x_max_exp
+        x_max_bin = 0
 
         # Check for range
         if x_max_bin > 200:
@@ -757,7 +758,7 @@ class ImPACTReconstructor(Reconstructor):
                               energy=params[4], error_energy=step[4],
                               limit_energy=limits[4], fix_energy=False,
                               x_max_scale=params[5], error_x_max_scale=step[5],
-                              limit_x_max_scale=limits[5], fix_x_max_scale=False,
+                              limit_x_max_scale=limits[5], fix_x_max_scale=True,
                               goodness_of_fit=False, fix_goodness_of_fit=True,
                               errordef=1)
 
